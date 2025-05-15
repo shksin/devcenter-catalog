@@ -1,0 +1,15 @@
+$schema: "1.0"
+name: "frontend-dev"
+image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m365-gen2
+description: "Custom Definiion for DevBox"
+
+tasks:
+  - name: winget
+    description: Install AZD
+    parameters:
+      package:  Microsoft.Azd
+
+  - name: powershell
+    parameters:
+      command: |
+        $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User') 
