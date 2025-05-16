@@ -25,6 +25,12 @@ tasks:
       package: Docker.DockerDesktop
 
   - name: powershell
+    description: add current user to docker-users group
+    parameters:
+      command: |
+        net localgroup docker-users \\\"""NT AUTHORITY\Authenticated Users\\\""" /ADD
+
+  - name: powershell
     parameters:
       command: |
         $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User') 
