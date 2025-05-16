@@ -15,14 +15,8 @@ tasks:
       package: Microsoft.AzureCLI
 
   - name: winget
-    description: Install Git
     parameters:
-      package: Microsoft.Git
-
-  - name: winget
-    description: Install Docker Desktop
-    parameters:
-      package: Docker.DockerDesktop
+      downloadUrl: 'https://raw.githubusercontent.com/shksin/devcenter-catalog/refs/heads/customisation/.configurations/devbox.dsc.yaml'
 
   - name: powershell
     description: add current user to docker-users group
