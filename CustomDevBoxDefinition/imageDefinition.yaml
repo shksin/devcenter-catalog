@@ -9,6 +9,21 @@ tasks:
     parameters:
       package:  Microsoft.Azd
 
+  - name: winget
+    description: Install Azure CLI
+    parameters:
+      package: Microsoft.AzureCLI
+
+  - name: winget
+    description: Install Git
+    parameters:
+      package: Microsoft.Git
+
+  - name: winget
+    description: Install Docker Desktop
+    parameters:
+      package: Docker.DockerDesktop
+
   - name: powershell
     parameters:
       command: |
