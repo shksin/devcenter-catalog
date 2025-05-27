@@ -15,16 +15,25 @@ tasks:
       package: Microsoft.AzureCLI
 
   - name: winget
+    description: Install Podman
     parameters:
-      downloadUrl: 'https://raw.githubusercontent.com/shksin/devcenter-catalog/refs/heads/customisation/.configurations/devbox.dsc.yaml'
-
-  - name: powershell
-    description: add current user to docker-users group
+      package: RedHat.Podman
+ 
+  - name: winget
+    description: Install Docker
     parameters:
-      command: |
-        net localgroup docker-users \\\"""NT AUTHORITY\Authenticated Users\\\""" /ADD
+      package: Docker.DockerDesktop
+ 
+  - name: winget
+    description: Install CrowdStrike
+    parameters:
+      package: CrowdStrike.Perseus
 
   - name: powershell
     parameters:
       command: |
         $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User') 
+
+
+
+  
