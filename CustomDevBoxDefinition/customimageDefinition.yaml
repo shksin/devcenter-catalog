@@ -1,0 +1,30 @@
+$schema: "1.0"
+name: "install-custom-tools"
+image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m365-gen2
+description: "Custom Definiion for DevBox"
+ 
+tasks:
+  - name: winget
+    description: Install AZD
+    parameters:
+      package:  Microsoft.Azd
+ 
+  - name: winget
+    description: Install Azure CLI
+    parameters:
+      package: Microsoft.AzureCLI
+ 
+  - name: winget
+    description: Install Podman
+    parameters:
+      package: RedHat.Podman
+ 
+  - name: winget
+    description: Install Docker
+    parameters:
+      package: Docker.DockerDesktop
+ 
+  - name: winget
+    description: Install CrowdStrike
+    parameters:
+      package: CrowdStrike.Perseus
